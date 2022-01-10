@@ -1,13 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-
-      int currentAccount = 100;
-      int SummRefill = 1100;
-      int bonus = SummRefill/100;
-      if (SummRefill < 1000) {
-        System.out.println((currentAccount+SummRefill) + " рублей");
-    } else
-    { System.out.println((currentAccount+bonus+SummRefill) + " рублей");
-      }
+        int depositAmount = 1100;
+        int bonus = depositAmount > 1000 ? depositAmount / 100 : 0;
+        int accountBefore = 100;
+        int account = depositAmount + accountBefore + bonus;
+        System.out.println("Бонус:" + bonus);
+        System.out.println("Баланс:" + account);
     }
 }
